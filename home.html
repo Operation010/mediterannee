@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mediterranee Zuid</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header met logo en navigatie -->
+    <header class="site-header">
+      <div class="header-content">
+        <img src="pics/logo2.1.png" alt="Logo" class="logo" />
+        <h1>Mediterranée Zuid</h1>
+        <nav>
+          <ul class="navbar">
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Secties in om-en-om stijl -->
+    <section id="about" class="bruin-licht">
+      <h2>About</h2>
+      <p>Welkom bij Mediterranée Zuid – dé plek voor luxe seafood en houtskoolgrill.</p>
+    </section>
+
+    <section id="menu" class="wit">
+      <h2>Menu</h2>
+      <ul class="menu-list">
+        <li><img class="menu-img" src="pics/pic1.jpeg" alt="item" />item</li>
+        <li><img class="menu-img" src="pics/pic1.jpeg" alt="item" />item</li>
+        <li><img class="menu-img" src="pics/pic1.jpeg" alt="item" />item</li>
+        <li><img class="menu-img" src="pics/pic1.jpeg" alt="item" />item</li>
+      </ul>
+    </section>
+
+    <section id="reviews" class="bruin-licht">
+      <h2>Reviews</h2>
+      <p>Onze gasten waarderen ons met 5 sterren!</p>
+    </section>
+
+    <section id="contact" class="wit">
+        <h2>Contact</h2>
+        <div class="contact-wrapper">
+          <form action="https://formspree.io/f/mvgrjbzg" method="POST">
+            <label for="email">Je e-mailadres:</label><br>
+            <input type="email" name="email" placeholder="Bijv.:naam@domein.nl" id="email" required><br><br>
+
+            <label for="message">Je bericht:</label><br>
+            <textarea name="message" placeholder="Uw bericht" id="message" rows="5" required></textarea><br><br>
+
+            <button type="submit">Versturen</button>
+          </form>
+      
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2463.2574379512124!2d4.502861215873338!3d51.89412427970956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c434ad8a104b3b%3A0x30db32f15b190d96!2sGroene%20Hilledijk%20196%2C%203074%20AB%20Rotterdam!5e0!3m2!1snl!2snl!4v1629206257746!5m2!1snl!2snl"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="socials">
+                <a href="https://www.facebook.com/mediterraneezuid/">Facebook</a>
+                <a href="tel:+31619087334">+31 6 19087334</a>
+            </div>
+            <div class="info">
+                <p>Adres: Groene Hilledijk 196-198, 3074 AB Rotterdam</p>
+                <p>&copy; 2025 Mediterranee Zuid. Alle rechten voorbehouden.</p>
+            </div>  
+        </div>
+    </footer>
+  </body>
+</html>

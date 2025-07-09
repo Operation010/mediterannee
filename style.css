@@ -1,0 +1,224 @@
+/* Algemene instellingen */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("pics/pic1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #111;
+}
+
+/* HEADER met logo links en nav gecentreerd */
+.site-header {
+  background-color: #023047; /* luxe donkerblauw */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+/* NAVIGATION */
+.navbar {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffb703; /* goud accentkleur */
+}
+
+/* CONTENT BOXES (volledige breedte padding) */
+.content-box {
+  width: 100%;
+  padding: 60px 8%;
+  margin: 0;
+  border-radius: 0;
+  backdrop-filter: blur(4px);
+}
+
+/* Transparant wit (voor luxe glas-effect) */
+.wit {
+  background-color: rgba(255, 255, 255, 0.7); /* half-transparant wit */
+  color: #111;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  backdrop-filter: blur(4px);
+}
+
+
+/* Luxe bruin-transparant */
+.bruin-licht {
+  background-color: rgba(185, 140, 80, 0.75);
+  color: #fefefe;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  backdrop-filter: blur(4px);
+}
+
+/* FOOTER */
+footer {
+  background-color: #023047;
+  color: #f1f1f1;
+  padding: 20px 8%;
+  font-size: 0.95rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  flex-wrap: wrap;
+}
+
+.footer-content .socials {
+  text-align: left;
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-content .info {
+  text-align: center;
+  flex: 2;
+  min-width: 300px;
+}
+
+.footer-content .info {
+  flex: 2 1 400px;
+  min-width: 280px;
+  text-align: left;
+}
+
+.footer-content .socials {
+  flex: 1 1 200px;
+  min-width: 200px;
+  text-align: left;
+}
+
+.footer-content .socials a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-content .socials a:hover {
+  color: #b88e5a;
+}
+
+
+/* MENU LIST GRID */
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.menu-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .content-box {
+    padding: 40px 6%;
+  }
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 0;
+  align-items: flex-start;
+}
+
+.contact-wrapper form {
+  flex: 1;
+  min-width: 300px;
+  margin-top: 0;
+}
+
+.map {
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  margin: 0;          /* ← GEEN extra marge boven */
+  padding: 0;
+  vertical-align: top;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .map {
+    height: 300px;
+  }
+}
