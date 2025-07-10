@@ -67,7 +67,7 @@ const $$ = sel => document.querySelectorAll(sel);
   <button id="prev" class="btn-primary">Vorige</button>
   <button id="next" class="btn-primary">Volgende</button>
 `;
-  document.querySelector("#menu").appendChild(btnContainer);
+  document.querySelector("#populair").appendChild(btnContainer);
 
   $("#next").addEventListener("click", goNext);
   $("#prev").addEventListener("click", goPrev);
