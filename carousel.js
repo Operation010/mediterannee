@@ -52,6 +52,9 @@ const $$ = sel => document.querySelectorAll(sel);
       hideRight.classList.add("hideRight");
       hideRight = hideRight.nextElementSibling;
     }
+    
+    // Update klikbaarheid na positie wijziging
+    updateClickability();
   }
 
   function goNext() {
@@ -66,6 +69,26 @@ const $$ = sel => document.querySelectorAll(sel);
 
   reorder();
   moveTo(selected);
+
+  // Maak alleen het geselecteerde item klikbaar
+  function updateClickability() {
+    [...items].forEach(item => {
+      // Verwijder alle click events en reset cursor
+      item.style.cursor = 'default';
+      item.onclick = null;
+    });
+    
+    // Maak alleen het geselecteerde item klikbaar
+    if (selected) {
+      const target = selected.getAttribute('data-menu-target');
+      if (target) {
+        selected.style.cursor = 'pointer';
+        selected.onclick = () => {
+          window.location.href = `menu.html#${target}`;
+        };
+      }
+    }
+  }
 
   // Voeg knoppen toe alleen als populair sectie bestaat
   const populairSection = document.querySelector("#populair");
