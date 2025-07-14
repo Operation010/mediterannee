@@ -7,11 +7,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
   <body>
+    <!-- Splash Screen / Intro -->
+    <div id="splash-screen" class="splash-screen">
+      <div class="splash-content">
+        <img src="pics/logo_lux.png" alt="Logo" class="splash-logo" />
+        <div class="splash-welcome">
+          <h1>Welkom</h1>
+        </div>
+      </div>
+      <div class="splash-background"></div>
+    </div>
+
     <!-- Header met logo en navigatie -->
     <header class="site-header">
       <div class="header-content">
         <div class="logo-section">
-          <img src="pics/logo2.1.png" alt="Logo" class="logo" />
+          <img src="pics/logo_lux.png" alt="Logo" class="logo" />
           <div class="restaurant-name">
             <h1>Mediterranee Zuid</h1>
             <span class="subtitle">seafood & houtkool</span>
@@ -19,11 +30,12 @@
         </div>
         <nav>
           <ul class="navbar">
+            <li><a href="home.html" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#populair">Populair</a></li>
             <li><a href="menu.html">Menu</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#populair">Populair</a></li>
             <li><a href="review.html">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
         <div class="spacer"></div>
@@ -32,13 +44,16 @@
 
     <main>
       <!-- Secties in om-en-om stijl -->
-      <section id="about" class="bruin-licht">
-        <h2>About</h2>
-        <p>Welkom bij Mediterranee Zuid – dé plek voor luxe seafood en houtskoolgrill.</p>
+      <section id="about">
+        <h2>Over Mediterranee Zuid</h2>
+        <p>Welkom bij Mediterranee Zuid – waar authentieke mediterrane smaken en Nederlandse visspecialiteiten samenkomen in Rotterdam Zuid.</p>
+        <p>Al meer dan een decennium serveren wij met passie de vers gevangen vis en zeevruchten, bereid op onze traditionele houtskoolgrill. Van klassieke kibbeling tot gegrilde dorade, elke bereiding draagt de warmte van de Middellandse Zee en de precisie van Nederlandse ambacht.</p>
+        <p>Ons team selecteert dagelijks de beste ingrediënten van lokale leveranciers. De geur van houtvuur, het sissen van verse vis op de grill, en de gezellige sfeer maken elke maaltijd tot een bijzondere ervaring.</p>
+        <p><strong>Kom proeven waarom Groene Hilledijk de beste plek is voor verse vis in Rotterdam Zuid.</strong></p>
       </section>
     
-      <section id="populair" class="wit">
-        <h2>Populair</h2>
+      <section id="populair">
+        <h2>Onze Specialiteiten</h2>
         <ul class="menu-list">
           <li data-menu-target="menus"><img class="menu-img" src="pics/pic1.jpeg" alt="item1" /><span class="caption">Menus</span></li>
           <li data-menu-target="schotels"><img class="menu-img" src="pics/pic1.jpeg" alt="item2" /><span class="caption">Schotels</span></li>
@@ -47,8 +62,8 @@
         </ul>
       </section>
     
-      <section id="contact" class="bruin-licht">
-          <h2>Contact</h2>
+      <section id="contact">
+          <h2>Neem Contact Op</h2>
           <div class="contact-wrapper">
             <form action="https://formspree.io/f/mvgrjbzg" method="POST">
               <label for="email">Je e-mailadres:</label><br>
@@ -85,6 +100,7 @@
             </div>  
         </div>
     </footer>
+    <script src="splash.js"></script>
     <script src="carousel.js"></script>
   </body>
 </html>

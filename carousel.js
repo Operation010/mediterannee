@@ -70,24 +70,28 @@ const $$ = sel => document.querySelectorAll(sel);
   reorder();
   moveTo(selected);
 
-  // Maak alleen het geselecteerde item klikbaar
+  // Maak alle items clickable met verschillende functionaliteit
   function updateClickability() {
     [...items].forEach(item => {
-      // Verwijder alle click events en reset cursor
-      item.style.cursor = 'default';
+      item.style.cursor = 'pointer';
+      
+      // Verwijder eventuele bestaande click handlers
       item.onclick = null;
+      
+      // Voeg click handler toe
+      item.onclick = () => {
+        if (item === selected) {
+          // Als het het geselecteerde (middelste) item is, ga naar menu pagina
+          const target = item.getAttribute('data-menu-target');
+          if (target) {
+            window.location.href = `menu.html#${target}`;
+          }
+        } else {
+          // Voor alle andere items, beweeg ze naar het midden
+          moveTo(item);
+        }
+      };
     });
-    
-    // Maak alleen het geselecteerde item klikbaar
-    if (selected) {
-      const target = selected.getAttribute('data-menu-target');
-      if (target) {
-        selected.style.cursor = 'pointer';
-        selected.onclick = () => {
-          window.location.href = `menu.html#${target}`;
-        };
-      }
-    }
   }
 
   // Voeg knoppen toe alleen als populair sectie bestaat
